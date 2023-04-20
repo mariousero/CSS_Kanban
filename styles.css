@@ -56,8 +56,25 @@ main > h1{
     color:rgb(29, 64, 80);
 }
 
-#kanban .column .card:hover .close{
+#kanban .column .card:hover::after{
     background-color: black;
+}
+
+#kanban .column .card::after{
+    content: "X";
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    width: 15px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-left: 5px;
 }
 
 #kanban .column .card > h3 {
@@ -94,17 +111,4 @@ main > h1{
 
 #kanban .column .card .tags .device{
     background-color: #d8d846;
-}
-
-#kanban .column .card .close{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 22px;
-    color: white;
-    background-color: red;
 }
